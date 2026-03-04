@@ -1,0 +1,99 @@
+<div class="flex flex-col gap-4 sm:gap-6 min-h-dvh px-4 mx-auto max-w-7xl">
+    <!-- Hero Section -->
+    <div class="flex flex-col gap-4">
+        <!-- Header Content -->
+        <div class="flex flex-col gap-3 sm:gap-4">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-600 tracking-tight">Customized Select
+                Configuration</h1>
+            <p class="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed max-w-4xl font-light">
+                Adaptive PrimeNG Select dropdown structure and styling for mobile and desktop using
+                <span pTooltip="Click to see more details!" tooltipPosition="bottom" class="cursor-pointer underline decoration-blue-500 hover:text-blue-600" (click)="onVisibleChange(true)">PlatformUtil.mobile()</span> as the branch condition.
+            </p>
+        </div>
+
+        <div class="flex flex-col gap-4 md:flex-wrap md:flex-row w-full max-h-[80vh] overflow-auto min-w-full px-2">
+            <div class="flex flex-col gap-2">
+                <!-- root -->
+                <div
+                    class="flex-1 min-w-[calc(50%-0.75rem)] bg-white border border-gray-200 rounded-lg p-4 flex flex-col gap-1 ">
+                    <div class="flex flex-col md:flex-row items-center gap-2 ">
+                        <span class="font-semibold text-gray-800">Overlay Target &amp; Cancel Button Injection</span>
+                        <span
+                            class="text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded w-full md:w-auto text-center md:text-sm">root</span>
+                    </div>
+                    <p class="text-gray-600 text-sm">Overrides the append target signal and injects a sticky Cancel
+                        footer on mobile.</p>
+                    <p class="text-gray-600 text-sm"><strong>Mobile:</strong> appends the overlay to the document body
+                        to escape parent overflow and z-index constraints, then injects a sticky Cancel button at the
+                        bottom of the overlay.</p>
+                    <p class="text-gray-600 text-sm"><strong>Desktop:</strong> appends the overlay inline next to the
+                        trigger element within its normal stacking context.</p>
+                </div>
+
+                <!-- pcOverlay.root -->
+                <div
+                    class="flex-1 min-w-[calc(50%-0.75rem)] bg-white border border-gray-200 rounded-lg p-4 flex flex-col gap-1">
+                    <div class="flex flex-col md:flex-row items-center gap-2 ">
+                        <span class="font-semibold text-gray-800">Overlay Backdrop &amp; Positioning</span>
+                        <span
+                            class="text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded w-full md:w-auto text-center md:text-sm">pcOverlay
+                            › root</span>
+                    </div>
+                    <p class="text-gray-600 text-sm"><strong>Mobile:</strong> full-screen semi-transparent black
+                        backdrop covering the entire viewport.</p>
+                    <p class="text-gray-600 text-sm"><strong>Desktop:</strong> no backdrop, constrained to the full
+                        width of its container.</p>
+                </div>
+
+                <!-- pcOverlay.content -->
+                <div
+                    class="flex-1 min-w-[calc(50%-0.75rem)] bg-white border border-gray-200 rounded-lg p-4 flex flex-col gap-1">
+                    <div class="flex flex-col md:flex-row items-center gap-2 ">
+                        <span class="font-semibold text-gray-800">Bottom Sheet vs Dropdown Shape</span>
+                        <span
+                            class="text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded w-full md:w-auto text-center md:text-sm">pcOverlay
+                            › content</span>
+                    </div>
+                    <p class="text-gray-600 text-sm"><strong>Mobile:</strong> anchors the panel to the bottom, centers
+                        it horizontally, caps height at 80vh, flex-column layout, and removes the bottom border radius.
+                    </p>
+                    <p class="text-gray-600 text-sm"><strong>Desktop:</strong> preserves PrimeNG's positioning, full
+                        height with hidden overflow for clean scrolling.</p>
+                </div>
+
+                <!-- listContainer -->
+                <div
+                    class="flex-1 min-w-[calc(50%-0.75rem)] bg-white border border-gray-200 rounded-lg p-4 flex flex-col gap-1">
+                    <div class="flex flex-col md:flex-row items-center gap-2 ">
+                        <span class="font-semibold text-gray-800">Scrollable List Area</span>
+                        <span
+                            class="text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded w-full md:w-auto text-center md:text-sm">listContainer</span>
+                    </div>
+                    <p class="text-gray-600 text-sm"><strong>Mobile:</strong> expands to fill all remaining vertical
+                        space inside the bottom sheet.</p>
+                    <p class="text-gray-600 text-sm"><strong>Desktop:</strong> removes default horizontal padding for
+                        edge-to-edge option alignment.</p>
+                </div>
+
+                <!-- optionLabel -->
+                <div
+                    class="flex-1 min-w-[calc(50%-0.75rem)] bg-white border border-gray-200 rounded-lg p-4 flex flex-col gap-1">
+                    <div class="flex flex-col md:flex-row items-center gap-2 ">
+                        <span class="font-semibold text-gray-800">Option Label Text Wrapping</span>
+                        <span
+                            class="text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded w-full md:w-auto text-center md:text-sm">optionLabel</span>
+                    </div>
+                    <p class="text-gray-600 text-sm">Static classes applied to all option labels regardless of platform.
+                        Overrides PrimeNG's default truncation so long labels wrap across multiple lines, break at word
+                        boundaries, and hyphenate automatically.</p>
+                </div>
+
+            </div>
+            <div class="flex-1 min-w-[calc(50%-0.75rem)] rounded-lg">
+                <app-code-viewer [componentName]="componentTitles[0].componentName" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-details-dialog [visible]="detailsDialogVisible()" (visibleChange)="onVisibleChange($event)"></app-details-dialog>

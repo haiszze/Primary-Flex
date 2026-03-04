@@ -1,7 +1,7 @@
 import { signal } from '@angular/core';
 import { PassThroughContext } from 'primeng/api';
 import { Select, SelectPassThrough } from 'primeng/select';
-import { PlatformUtil } from '../../utils/platform.util';
+import { PlatformUtil } from './platform.util';
 
 export const SelectPt: SelectPassThrough = {
   root: (context: PassThroughContext<Select>) => {

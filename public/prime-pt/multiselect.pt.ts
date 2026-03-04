@@ -1,7 +1,7 @@
 import { signal } from '@angular/core';
 import { PassThroughContext } from 'primeng/api';
 import { MultiSelect, MultiSelectPassThrough } from 'primeng/multiselect';
-import { PlatformUtil } from '../../utils/platform.util';
+import { PlatformUtil } from './platform.util';
 
 export const MultiSelectPt: MultiSelectPassThrough = {
   root: (context: PassThroughContext<MultiSelect>) => {

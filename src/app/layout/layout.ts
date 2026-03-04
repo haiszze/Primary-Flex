@@ -7,6 +7,7 @@ import { PanelMenuModule } from 'primeng/panelmenu';
   selector: 'app-layout',
   standalone: true,
   templateUrl: './layout.html',
+  styleUrl: './layout.css',
   imports: [RouterOutlet, PanelMenuModule],
 })
 

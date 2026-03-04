@@ -16,7 +16,7 @@
         <div class="flex flex-col gap-4 md:flex-wrap md:flex-row w-full">
             @for (item of componentTitles; track $index) {
                 <div class="flex-1 min-h-[20vdh] min-w-[calc(50%-0.75rem)] sm:min-w-[calc(50%-0.75rem)] transform transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-1">
-                    <app-stats-card (emitVisible)="true" [title]="item.title" [subtitle]="item.subtitle" [description]="item.description" [componentType]="item.componentType"/>
+                    <app-stats-card (emitVisible)="true" [title]="item.title" [subtitle]="item.subtitle" [description]="item.description" [componentType]="item.componentType" [path]="item.path" />
                 </div>
             }
         </div>

@@ -1,0 +1,5 @@
+<div class="relative">
+    <button pButton outlined="true" [icon]="'pi pi-copy'" [label]="copied() ? 'Copied!' : 'Copy'" class="copy-btn" (click)="copyCode()">
+    </button>
+<pre><code class="language-typescript">{{ code() }}</code></pre>
+</div>

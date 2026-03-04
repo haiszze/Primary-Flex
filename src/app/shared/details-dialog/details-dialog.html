@@ -1,0 +1,21 @@
+<p-dialog [visible]="visible()" (visibleChange)="onVisibleChange($event)" draggable="false" resizable="false" [header]="'Platform Utility'" resizable="false" [modal]="true" (onHide)="close()"
+    [style]="{ width: '45vw' }">
+    <ng-template pTemplate="content">
+        <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-2">
+                <h3 class="font-semibold text-gray-800">Description</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    PlatformUtil is a utility class that provides responsive design helpers for detecting device types and viewport sizes.
+                    It uses Tailwind breakpoints (sm, md, lg, xl, 2xl) to determine screen sizes, plus a mobile device detection method.
+                    Use these methods to conditionally apply layouts and behaviors based on the user's device and screen size.
+                </p>
+            </div>
+
+            <!-- Code -->
+            <div class="flex flex-col gap-2">
+                <h3 class="font-semibold text-gray-800">Source Code</h3>
+                <app-code-viewer [componentName]="'platform'"></app-code-viewer>
+            </div>
+        </div>
+    </ng-template>
+</p-dialog>

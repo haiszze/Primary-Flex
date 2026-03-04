@@ -13,7 +13,15 @@ export const routes: Routes = [
 			{
 				path: 'home',
 				loadComponent: () => import('./pages/home/home').then(m => m.Home),
-			}
+			},
+      {
+        path: 'select',
+				loadComponent: () => import('./pages/component-select/component-select').then(m => m.ComponentSelect),
+      },
+      {
+        path: 'multiselect',
+				loadComponent: () => import('./pages/component-multiselect/component-multiselect').then(m => m.ComponentMultiselect),
+      }
 		]
 	}
 ];

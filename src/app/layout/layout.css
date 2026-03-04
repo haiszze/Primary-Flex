@@ -1,0 +1,13 @@
+.layout-fade-in {
+  animation: layoutFadeIn 700ms ease-out both;
+}
+
+@keyframes layoutFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
