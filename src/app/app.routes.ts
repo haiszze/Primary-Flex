@@ -20,7 +20,7 @@ export const routes: Routes = [
       },
       {
         path: 'multiselect',
-				loadComponent: () => import('./pages/component-multiselect/component-multiselect').then(m => m.ComponentMultiselect),
+				loadComponent: () => import('./pages/component-multiselect/component-multiselect').then(m => m.ComponentMultiSelect),
       }
 		]
 	}
