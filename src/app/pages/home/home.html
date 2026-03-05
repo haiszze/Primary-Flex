@@ -3,12 +3,9 @@
     <div class="flex flex-col gap-4 sm:gap-6">
         <!-- Header Content -->
         <div class="flex flex-col gap-3 sm:gap-4">
-            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-600 tracking-tight">PrimeNG for Mobile</h1>
+            <h1 class="text-2xl sm:text-3xl md:text-6xl font-bold text-gray-600 tracking-tight">BLOCSKY</h1>
             <p class="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed max-w-4xl font-light">
-                A comprehensive guide for adapting PrimeNG components for mobile applications using Angular.
-                Learn how to optimize components for mobile use, customize them to fit mobile design principles,
-                and implement adaptive patterns. Includes best practices for testing on real devices,
-                handling platform-specific behaviors, and enhancing user experience with mobile-ready design.
+                Blocks of UI customized components using UI components library for responsiveness.
             </p>
         </div>
 
@@ -16,7 +13,8 @@
         <div class="flex flex-col gap-4 md:flex-wrap md:flex-row w-full">
             @for (item of componentTitles; track $index) {
                 <div class="flex-1 min-h-[20vdh] min-w-[calc(50%-0.75rem)] sm:min-w-[calc(50%-0.75rem)] transform transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-1">
-                    <app-stats-card (emitVisible)="true" [title]="item.title" [subtitle]="item.subtitle" [description]="item.description" [componentType]="item.componentType" [path]="item.path" />
+                    <app-stats-card (emitVisible)="true" [title]="item.title" [subtitle]="item.subtitle" [description]="item.description" [componentType]="item.componentType" [path]="item.path" [icon]="item.icon" [uiLibIcon]="item.uiLibIcon" [uiLibIconName]="item.uiLibIconName"
+                    />
                 </div>
             }
         </div>

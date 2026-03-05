@@ -1,6 +1,7 @@
 import { Component, inject, input, output } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-stats-card',
   templateUrl: './stats-card.html',
@@ -14,8 +15,12 @@ export class StatsCardComponent {
   subtitle = input<string>('');
   emitVisible = output<boolean>();
   description = input<string>('');
-  componentType = input<string>('');
+  componentType = input<string[]>([]);
   path = input<string>('');
+  icon = input<string>('');
+  uiLibIcon = input<string>('');
+  uiLibIconName = input<string>('');
+  iconName = input<string>('');
 
   onNavigateTo(path: string) {
     this.router.navigate([path]);
